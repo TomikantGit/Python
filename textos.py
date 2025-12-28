@@ -16,9 +16,9 @@ cor_preferida = "azul"
 
 # a melhor forma é utilizando váriaveis dentro do próprio texto, utilizando "f" depois do =
 
-texto_completo2 = f"olá, seu nome é {nome}, sua idade é de {idade} anos e sua cor preferida é a cor {cor_preferida}"
+# texto_completo2 = f"olá, seu nome é {nome}, sua idade é de {idade} anos e sua cor preferida é a cor {cor_preferida}"
 
-print(texto_completo2)
+# print(texto_completo2)
 
 email = " TAFODANECURSOR@GMAIL.COM "
 
@@ -27,6 +27,14 @@ email = email.strip()
 email = email.capitalize()
 
 print(email)
-caracteres = print(len(email))
+caracteres = len(email)
 
-texto = f"olá, seu nome é {nome} e o seu email é {email} e a quantidade de caracteres do seu email é {caracteres})
+texto = f"olá, seu nome é {nome} e o seu email é {email} e a quantidade de caracteres do seu email é {caracteres}"
+
+print(texto)
+
+posicao = email.find("o")
+
+print(posicao)
+
+print(email[0:14])
