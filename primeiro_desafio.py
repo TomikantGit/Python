@@ -1,3 +1,5 @@
+nome = "João Pedro Souza"
+email = "joaogameplays@gmail.com"
 
 indice_arroba = email.find("@")
 
