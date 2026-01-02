@@ -23,6 +23,31 @@ print(dic_dinheiro["Cartão"])
 
 dic_dinheiro.pop("Pix")
 
+print(dic_dinheiro)
+
 # editar um valor
 
-print(dic_dinheiro)
+
+
+# verifica se existe no dicionario
+
+pessoa_existe = "Fernanda" in dic_pessoas
+
+print(pessoa_existe)
+
+# verifica se existe atráves da chave/key ou o valor/value
+
+print("Fernanda" in dic_pessoas.keys())
+print(22 in dic_pessoas.values())
+
+# mostrar as chaves ou valores como listas.
+
+lista_pessoas = list(dic_pessoas.keys())
+print(lista_pessoas)
+lista_idades = list(dic_pessoas.values())
+print(lista_idades)
+
+# mostrando a quantidade de itens no dicionário
+
+qtd_pessoas = len(dic_pessoas)
+print(qtd_pessoas)
