@@ -1,0 +1,103 @@
+
+<style>
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 16px 0; }
+  .card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 16px; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; }
+  .tag-blue  { background: #E6F1FB; color: #0C447C; }
+  .tag-green { background: #EAF3DE; color: #27500A; }
+  .tag-amber { background: #FAEEDA; color: #633806; }
+  .tag-coral { background: #FAECE7; color: #712B13; }
+  .name { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
+  .desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; margin: 0 0 8px; }
+  .skills { font-size: 11px; color: var(--color-text-tertiary); }
+  .skill-pill { display: inline-block; background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; padding: 2px 8px; margin: 2px 2px 0 0; font-size: 11px; color: var(--color-text-secondary); }
+  .section-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); margin: 20px 0 6px; padding-bottom: 6px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  a.link { font-size: 11px; color: var(--color-text-info); text-decoration: none; }
+</style>
+
+<div class="section-title">Datasets embutidos (sem download)</div>
+<div class="grid">
+  <div class="card">
+    <span class="tag tag-green">Iniciante</span>
+    <div class="name">Titanic</div>
+    <div class="desc">Passageiros do Titanic com sobrevivência, idade, classe e tarifa. O clássico para começar.</div>
+    <div><span class="skill-pill">groupby</span><span class="skill-pill">fillna</span><span class="skill-pill">value_counts</span></div>
+    <div style="margin-top:8px"><a class="link" href="https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv">↗ CSV direto</a> · <code style="font-size:10px">seaborn.load_dataset('titanic')</code></div>
+  </div>
+  <div class="card">
+    <span class="tag tag-green">Iniciante</span>
+    <div class="name">Iris / Penguins</div>
+    <div class="desc">Medidas de flores ou pinguins. Limpo, pequeno e ideal para primeiras análises.</div>
+    <div><span class="skill-pill">describe</span><span class="skill-pill">corr</span><span class="skill-pill">plot</span></div>
+    <div style="margin-top:8px"><code style="font-size:10px">seaborn.load_dataset('penguins')</code></div>
+  </div>
+</div>
+
+<div class="section-title">Dados reais — intermediário</div>
+<div class="grid">
+  <div class="card">
+    <span class="tag tag-blue">Intermediário</span>
+    <div class="name">NYC Taxi Trips</div>
+    <div class="desc">Milhões de corridas de táxi em Nova York com localização, horário e valor. Exige otimização de memória.</div>
+    <div><span class="skill-pill">datetime</span><span class="skill-pill">merge</span><span class="skill-pill">resample</span><span class="skill-pill">dtypes</span></div>
+    <div style="margin-top:8px"><a class="link" href="https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page">↗ nyc.gov</a></div>
+  </div>
+  <div class="card">
+    <span class="tag tag-blue">Intermediário</span>
+    <div class="name">World Happiness Report</div>
+    <div class="desc">Índices de felicidade por país e ano. Ótimo para joins, pivot tables e comparações temporais.</div>
+    <div><span class="skill-pill">pivot_table</span><span class="skill-pill">melt</span><span class="skill-pill">join</span></div>
+    <div style="margin-top:8px"><a class="link" href="https://www.kaggle.com/datasets/unsdsn/world-happiness">↗ Kaggle</a></div>
+  </div>
+  <div class="card">
+    <span class="tag tag-blue">Intermediário</span>
+    <div class="name">Netflix / Spotify Charts</div>
+    <div class="desc">Histórico de filmes/músicas com datas, gêneros e popularidade. Séries temporais ricas.</div>
+    <div><span class="skill-pill">str accessor</span><span class="skill-pill">explode</span><span class="skill-pill">rolling</span></div>
+    <div style="margin-top:8px"><a class="link" href="https://www.kaggle.com/datasets/shivamb/netflix-shows">↗ Kaggle Netflix</a></div>
+  </div>
+  <div class="card">
+    <span class="tag tag-blue">Intermediário</span>
+    <div class="name">Stack Overflow Survey</div>
+    <div class="desc">Pesquisa anual com desenvolvedores de todo o mundo: salários, tecnologias e perfil profissional.</div>
+    <div><span class="skill-pill">categorical</span><span class="skill-pill">apply</span><span class="skill-pill">agg</span></div>
+    <div style="margin-top:8px"><a class="link" href="https://insights.stackoverflow.com/survey">↗ stackoverflow.com</a></div>
+  </div>
+</div>
+
+<div class="section-title">Dados complexos — avançado</div>
+<div class="grid">
+  <div class="card">
+    <span class="tag tag-amber">Avançado</span>
+    <div class="name">COVID-19 (Our World in Data)</div>
+    <div class="desc">Série temporal global com casos, mortes e vacinação por país. Dados atualizados diariamente.</div>
+    <div><span class="skill-pill">time series</span><span class="skill-pill">resample</span><span class="skill-pill">ffill</span></div>
+    <div style="margin-top:8px"><a class="link" href="https://github.com/owid/covid-19-data">↗ GitHub OWID</a></div>
+  </div>
+  <div class="card">
+    <span class="tag tag-amber">Avançado</span>
+    <div class="name">IBGE / DataSUS</div>
+    <div class="desc">Dados brasileiros: censo, saúde e economia. Ideal para trabalhar com dados do Brasil de verdade.</div>
+    <div><span class="skill-pill">encoding</span><span class="skill-pill">locale</span><span class="skill-pill">merge</span></div>
+    <div style="margin-top:8px"><a class="link" href="https://basedosdados.org">↗ basedosdados.org</a></div>
+  </div>
+</div>
+
+<div class="section-title">Repositórios com dezenas de datasets</div>
+<div style="display:flex;flex-direction:column;gap:8px;padding-bottom:8px">
+  <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md)">
+    <span class="tag tag-coral" style="margin:0;white-space:nowrap">Kaggle</span>
+    <span style="font-size:12px;color:var(--color-text-secondary)">Maior plataforma de datasets do mundo — filtrar por "pandas" ou "EDA" mostra projetos prontos para estudar</span>
+    <a class="link" href="https://www.kaggle.com/datasets" style="margin-left:auto;white-space:nowrap">↗ kaggle.com</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md)">
+    <span class="tag tag-coral" style="margin:0;white-space:nowrap">UCI ML Repo</span>
+    <span style="font-size:12px;color:var(--color-text-secondary)">Repositório acadêmico clássico com 600+ datasets estruturados e bem documentados</span>
+    <a class="link" href="https://archive.ics.uci.edu/datasets" style="margin-left:auto;white-space:nowrap">↗ uci.edu</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md)">
+    <span class="tag tag-coral" style="margin:0;white-space:nowrap">Base dos Dados</span>
+    <span style="font-size:12px;color:var(--color-text-secondary)">Plataforma brasileira com dados públicos do Brasil, já organizados e com integração Python</span>
+    <a class="link" href="https://basedosdados.org" style="margin-left:auto;white-space:nowrap">↗ basedosdados.org</a>
+  </div>
+</div>
